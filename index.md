@@ -4,9 +4,10 @@
 
 ## Presentación ##
 Con este conjunto de guías, veremos como se diseñan e implementan las siguientes tecnologías dentro de los sistemas y aplicaciones desarrolladas por el equipo EmeRetail, de Retail SA.
-![logo java](https://www.redbubble.com/es/people/antai/works/10218204-java-logo?p=sticker)
-![logo spring](https://i2.wp.com/blog.fabianpiau.com/wp-content/uploads/2016/03/spring.png?fit=450%2C450&ssl=1)
-![logo spring boot](https://i0.wp.com/mydevgeek.com/wp-content/uploads/2017/02/spring-boot-project-logo.png?resize=300%2C300)
+
+<img src="https://logoeps.com/wp-content/uploads/2013/03/java-eps-vector-logo.png" width="150" alt="logo java"/>
+<img src="https://i2.wp.com/blog.fabianpiau.com/wp-content/uploads/2016/03/spring.png" width="150" alt="logo spring"/>
+<img src="https://i0.wp.com/mydevgeek.com/wp-content/uploads/2017/02/spring-boot-project-logo.png" width="150" alt="logo spring boot"/>
 
 ### Los tópicos a abarcar son: ###
 - Java
