@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+# Capacitación TIC Retail - 2018 #
 
-You can use the [editor on GitHub](https://github.com/cdanielpy/cdaniel.py.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Presentación ##
+Con este conjunto de guías, veremos como se diseñan e implementan las siguientes tecnologías dentro de los sistemas y aplicaciones desarrolladas por el equipo EmeRetail, de Retail SA.
+![logo java](https://www.redbubble.com/es/people/antai/works/10218204-java-logo?p=sticker)
+![logo spring](https://i2.wp.com/blog.fabianpiau.com/wp-content/uploads/2016/03/spring.png?fit=450%2C450&ssl=1)
+![logo spring boot](https://i0.wp.com/mydevgeek.com/wp-content/uploads/2017/02/spring-boot-project-logo.png?resize=300%2C300)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Los tópicos a abarcar son: ###
+- Java
+- Spring Framework con Spring Boot
+- Servicios Web RESTful
+- Maven
+- JUnit
+- Conexión a María DB
 
-```markdown
-Syntax highlighted code block
+----------
 
-# Header 1
-## Header 2
-### Header 3
+### Requisitos previos ###
+Para poder poner en practica los 
+- [STS 3.8 (+)](http://download.springsource.com/release/STS/3.9.2.RELEASE/dist/e4.7/spring-tool-suite-3.9.2.RELEASE-e4.7.2-win32-x86_64.zip "STS 3.8 (+)")
+- [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-- Bulleted
-- List
+### Qué haremos? ###
+- [Spring Boot](https://projects.spring.io/spring-boot/)
+- Servicios Web [Rest](https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional)
+	- Métodos comunes (GET, PUT, POST, DELETE)
+- [Maven](https://es.wikipedia.org/wiki/Maven)
+- [JUnit](https://es.wikipedia.org/wiki/JUnit) (básico)
+- Logging con [Logback](https://logback.qos.ch/)
 
-1. Numbered
-2. List
+- [Seguridad ](https://spring.io/guides/gs/securing-web/)
+- Conectar a una base de datos
+	- Operaciones sin xQL
+	- Manejo de Transacciones
+	- Operaciones con HQL
+	- Operaciones con SQL Nativo
+- [Auditoría DML](http://www.baeldung.com/database-auditing-jpa)
+- [Javadoc](https://es.wikipedia.org/wiki/Javadoc)
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cdanielpy/cdaniel.py.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Qúe NO haremos? ###
+- Java inicial
+- SQL inicial
