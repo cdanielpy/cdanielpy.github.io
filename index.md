@@ -3,7 +3,7 @@
 
 
 ## Presentación ##
-Con este conjunto de guías, veremos como se diseñan e implementan las siguientes tecnologías dentro de los sistemas y aplicaciones desarrolladas por el equipo EmeRetail, de Retail SA.
+Con este conjunto de guías, veremos como se diseñan e implementan las siguientes tecnologías dentro de los sistemas y aplicaciones desarrolladas por el equipo de Desarrollo EmeRetail, de la división Retail SA del Grupo [AJ Vierci](http://www.grupovierci.com//supermercados-stock-/12/1/).
 <div align="center">
 <img src="https://logoeps.com/wp-content/uploads/2013/03/java-eps-vector-logo.png" width="100" alt="logo java"/>
 <img src="https://i2.wp.com/blog.fabianpiau.com/wp-content/uploads/2016/03/spring.png" width="100" alt="logo spring"/>
