@@ -1,7 +1,7 @@
 # Consejos personales para el desarrollo de sistemas #
 [Cristian Daniel Garay Sosa](https://about.me/cdanielpy "https://about.me/cdanielpy")
 
-![consejo](http://coachfarmacia.com/wp-content/uploads/2014/03/dar_consejo_farmacia_xerostomia%20.jpg)
+<p align="center"><img src="http://coachfarmacia.com/wp-content/uploads/2014/03/dar_consejo_farmacia_xerostomia%20.jpg" title="Click for the larger version."/></p>
 
 En desarrollo...
 
@@ -13,7 +13,7 @@ Por todo lo anterior, aquí hago una recopilación de varios ***tips*** y consej
 
 Tal vez uno de mis mayores defectos sea que ninguno de los proyectos que llegue a desarrollar e implementar sea igual a otro. Si los pudiera ordenar en forma secuencial cronológica y ver un diagrama del diseño de cada uno, vería algo parecido a la imagen de abajo,  aunque todavía no llegue a la última porque queda mucho por aprender, todo el tiempo:
 
-<img src="https://elrincondelmae.files.wordpress.com/2015/07/wpid-wp-1436577562077.png" style="width: 600px; max-width: 100%; height: auto" title="Click for the larger version."/>
+<p align="center"><img src="https://elrincondelmae.files.wordpress.com/2015/07/wpid-wp-1436577562077.png" style="width: 600px; max-width: 100%; height: auto" title="Click for the larger version."/></p>
 
 ## Al punto, y basta de divagues ##
 En fin, vayamos al grano, a continuación listo lo que serían mis consejos a aplicar durante el proceso de desarrollo de sistemas (o aplicaciones, o scripts, o lo que sea que conlleve líneas de código de programación):
