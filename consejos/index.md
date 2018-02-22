@@ -19,4 +19,4 @@ Tal vez uno de mis mayores defectos sea que ninguno de los proyectos que llegue 
 En fin, vayamos al grano, a continuación listo lo que serían mis consejos a aplicar durante el proceso de desarrollo de sistemas (o aplicaciones, o scripts, o lo que sea que conlleve líneas de código de programación):
 
 (Click en cada uno si extrañas los divagues)
-### [1- Que el código sea el documento](./#!consejo-nro-1.md). ###
+### [1- Que el código sea el documento](consejo-nro-1.md). ###
