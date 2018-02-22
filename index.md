@@ -29,12 +29,15 @@ Para poder poner en practica los
 - [STS 3.8 (+)](http://download.springsource.com/release/STS/3.9.2.RELEASE/dist/e4.7/spring-tool-suite-3.9.2.RELEASE-e4.7.2-win32-x86_64.zip "STS 3.8 (+)")
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-### Qué haremos? ###
+## Qué veremos? ##
 - [Spring Boot](https://projects.spring.io/spring-boot/)
 - Servicios Web [Rest](https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional)
 	- Métodos comunes (GET, PUT, POST, DELETE)
-- [Maven](https://es.wikipedia.org/wiki/Maven)
-- [JUnit](https://es.wikipedia.org/wiki/JUnit) (básico)
+	- Creación de beans manuales
+	- Parametrización de la aplicación
+	- Documentación de parámetros
+- Resolución de dependencias con [Maven](https://es.wikipedia.org/wiki/Maven)
+- Pruebas unitarias con [JUnit](https://es.wikipedia.org/wiki/JUnit) (básico)
 - Logging con [Logback](https://logback.qos.ch/)
 
 - [Seguridad ](https://spring.io/guides/gs/securing-web/)
@@ -45,8 +48,14 @@ Para poder poner en practica los
 	- Operaciones con SQL Nativo
 - [Auditoría DML](http://www.baeldung.com/database-auditing-jpa)
 - [Javadoc](https://es.wikipedia.org/wiki/Javadoc)
+- Pensando en otros a futuro...
 
 
-### Qúe NO haremos? ###
+## Qúe NO veremos? ##
 - Java inicial
 - SQL inicial
+
+## Primer ejercicio ##
+Con el primer ejercicio veremos como crear una aplicación Spring Boot lista para desplegar en un servidor de aplicaciones en pocos pasos.
+
+[Ir al primer ejercicio](./#!primer-ejercicio.md)  
