@@ -44,7 +44,7 @@ Para poder poner en practica los
 - Conectar a una base de datos
 	- Operaciones sin xQL
 	- Manejo de Transacciones
-	- Operaciones con HQL
+	- Operaciones con JPQL
 	- Operaciones con SQL Nativo
 - [Auditoría DML](http://www.baeldung.com/database-auditing-jpa)
 - [Javadoc](https://es.wikipedia.org/wiki/Javadoc)
