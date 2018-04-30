@@ -260,9 +260,15 @@ Este este es el mecanismo más común para hacer pruebas unitarias con _JUnit_ y
     - "Privatizamos" el constructor de la clase.
     - Creamos el método `getInstancia()` que retorne la referencia a la instancia estática.
   - Agregamos los métodos para manejar los datos contenidos:
-    - Persistir
+    - Persistir (altas y modificaciones)
+
     - Remover
+
     - Listar (con y sin criterios de filtrado)
+
+    - La clase debería de quedar más o menos parecida a lo que vemos [aquí](../codigos/javaBaseDatos.html). 
+
+      ​
 
 
 _**Tarea 1-004:**_ Probemos nuestra aplicación hasta este punto escribiendo los métodos en la clase de testing.
@@ -271,6 +277,20 @@ _**Tarea 1-004:**_ Probemos nuestra aplicación hasta este punto escribiendo los
   - Para cada entidad.
   - Para la base de datos.
   - Para los métodos de persistencia y listado (con y sin criterios).
+
+
+
+
+### 4- Crear los servicios correspondientes
+
+Creamos los métodos correspondientes a los servicios requeridos para poder realizar el ABM y Listado de cada una de las entidades creadas `GET, POST, PUT` y `DELETE`.
+
+Los métodos  deben agregarse a la clase `MainController` y pueden verse como [éste](../codigos/javaAbmAlumnos.html) conjunto.
+
+
+
+_**Tarea 1-005:**_ Crear los métodos correspondientes para el manejo de datos de _Materias_ y _Aulas_.
+
 
 
 ### Fin del primer ejercicio
