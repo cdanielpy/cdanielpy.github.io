@@ -252,8 +252,8 @@ Este este es el mecanismo más común para hacer pruebas unitarias con _JUnit_ y
 7. Dentro del nuevo paquete, creamos la clase `BaseDatos`, de tipo ***final***, con los atributos siguientes:
   - Una lista de instancias de la clase `Aula`, otra de `Materia` y una más de `Alumno`, todas de tipo ***final***
   - Las listas de instancias no deben aceptar instancias repetidas, deben ser únicas. 
-  - Creamos instancias de `AtomicInteger` para utilizarlos como generadores de IDs para cada colección.
-  - Antes continuar, crearemos una _super clase_ `Entidad`, que implemente la interface `java.io.Serializable` y que haga de padre a nuestras clases de datos actuales. Ésta clase deberá tener un atributo `id` de tipo genérico y otro `nombre` de tipo `String`.  Ya veremos las ventajas que brindan.
+  - Creamos unas instancias de `AtomicInteger` para utilizarlos como generadores de IDs para cada colección.
+  - Antes continuar, crearemos una _super clase_ `Entidad`, que implemente la interface `java.io.Serializable` y que haga de padre a nuestras clases de datos actuales. Ésta clase deberá tener un atributo `id` de tipo genérico y otro `nombre` de tipo `String`, ambas deben ser visibles hasta sus clases de implementación.  Ya veremos las ventajas que brindan.
   - Modificamos las entidades originales para que extiendan de `Entidad` y resolvemos los warnings que nos aparezcan.
   - Hagamos que la clase `BaseDatos` sea un _Singleton_, para reducir las probabilidades de inconsistencias de datos:
     - Creamos una instancia estática de sí misma como atributo.
@@ -270,7 +270,7 @@ _**Tarea 1-004:**_ Probemos nuestra aplicación hasta este punto escribiendo los
 
   - Para cada entidad.
   - Para la base de datos.
-  - Para los métodos de persistencia y listado.
+  - Para los métodos de persistencia y listado (con y sin criterios).
 
 
 ### Fin del primer ejercicio
