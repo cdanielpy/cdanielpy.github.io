@@ -19,9 +19,9 @@ Para este mini tutorial se verá cómo implementar una aplicación de servicios 
 
 ### 1- Crear el proyecto 
 
-- Desde el menú **Archivo/File** del STS, seleccionar **[File] -> [new] -> [Spring Boot] -> [Import Spring Getting Started Content]**.
+- Desde el menú **Archivo/File** del STS, seleccionar **[File] -> [New] -> [Spring Boot] -> [Import Spring Getting Started Content]**.
 
-- Seleccionar el proyecto **"Rest Service"**, marcar la opción **[Maven]** del conjunto "**Build Type**" y del conjunto "**Code Sets**", la opción **[complete]**.
+- Seleccionar el proyecto **"Rest Service"**, marcar la opción **[Maven]** del conjunto "**Build Type**" y del conjunto "**Code Sets**", dejar marcada la opción **[complete]**.
 
 - Cuando haya finalizado la descarga de los archivos requeridos, se haya generado la estructura de directorios y haya construido/compilado el proyecto por primera vez, nos aparecerá el proyecto listo para ejecutar y probar el servicio web de ejemplo que trae por defecto y la estructura del mismo será como en la imagen de a continuación:
 
