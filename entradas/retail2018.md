@@ -1,7 +1,5 @@
 # Capacitación TIC Retail - 2018 #
 
-
-
 ## Presentación ##
 Con este conjunto de guías, veremos como se diseñan e implementan las siguientes tecnologías dentro de los sistemas y aplicaciones desarrolladas por el equipo de Desarrollo EmeRetail, de la división Retail SA del Grupo [AJ Vierci](http://www.grupovierci.com//supermercados-stock-/12/1/).
 <div align="center">
@@ -58,4 +56,4 @@ Para poder poner en practica los
 ## Primer ejercicio ##
 Con el primer ejercicio veremos como crear una aplicación Spring Boot lista para desplegar en un servidor de aplicaciones en pocos pasos.
 
-[Ir al primer ejercicio](ejercicios/primer-ejercicio.html)  
+[Ir al primer ejercicio](../ejercicios/primer-ejercicio.html)  
