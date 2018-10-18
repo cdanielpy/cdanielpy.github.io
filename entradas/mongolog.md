@@ -30,10 +30,12 @@ Aprovechando mi experiencia decidí investigar como desarrollar cada uno de los 
 - [MongoDB](https://www.mongodb.com/es): como almacen de los datos de eventos registrados, y
 - [JSON](https://www.json.org/): como estructura modelo de los datos en todo el flujo.
 
+
 ## Diagrama de Flujo
 
 <div align="center"><img src="https://drive.google.com/uc?id=1VMny-HWh1Ez-ezZ1Q1UqBBhS9d-1AzIx" width="600" alt="dfd logger"/></div>
 <br/>
+
 
 ##### En la imagen podemos ver cómo sería el flujo de datos de eventos registrados (de izquierda a derecha):
 
@@ -48,4 +50,4 @@ Aprovechando mi experiencia decidí investigar como desarrollar cada uno de los 
 
 Despúes de tanta teoría ya podemos empezar con la parte dura en la que escribiremos el código de las aplicaciones de origenes de eventos como también la de recepción y persistencia de los mismos.
 
-### [Paso 1: Preparar el RabbitMQ]()
+### [Paso 1: Preparar el RabbitMQ](./mongolog/rabbitcon)
