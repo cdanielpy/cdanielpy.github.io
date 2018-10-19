@@ -5,7 +5,7 @@
 
 Continuando con el desarrollo de nuestro proyecto de centralización de eventos de logging, debemos comenzar a preparar el entorno, empezando por el que hará el transporte de los datos.
 
-> Nos saltaremos la instalación y configuración del RabbitMQ y del MongoDB, cuyos sitios web contienen suficiente información acerca de dichos procesos.
+> Nos saltaremos la instalación y configuración del [RabbitMQ](https://www.rabbitmq.com/download.html) y del [MongoDB](https://www.mongodb.com/download-center?initial=true#community), cuyos sitios web contienen suficiente información acerca de dichos procesos.
 
 ### Configuración de requerimientos en el RabbitMQ
 
@@ -23,7 +23,7 @@ Una `queue` de destino de los mensajes.
 
 Estando en la seccion _**[Add a new exchange]**_, de la pestaña _**[Exchanges]**_ del **RabbitMQ** seguimos los pasos siguientes:
 
-1. El host virtual lo dejamos en _**/**_, que es el host por defecto (salvo otras preferencias).
+1. El host virtual lo dejamos en _**"/"**_, que es el host por defecto (salvo otras preferencias).
 2. Ingresamos el nombre _**"logger.exchange"**_ (puede ser cualquiera).
 3. Debe ser de tipo _**"direct"**_.
 4. Los demás valores los dejamos en su configuración por defecto.
@@ -39,7 +39,7 @@ Estando en la seccion _**[Add a new exchange]**_, de la pestaña _**[Exchanges]*
 
 Estando en la seccion _**[Add a new queue]**_, de la pestaña _**[Queues]**_ del **RabbitMQ** seguimos los pasos siguientes:
 
-1. El host virtual lo dejamos en _**/**_, que es el host por defecto (salvo otras preferencias).
+1. El host virtual lo dejamos en _**"/"**_, que es el host por defecto (salvo otras preferencias).
 
 2. Ingresamos el nombre _**"logger_input_queue"**_ (también puede ser cualquiera).
 
@@ -73,7 +73,7 @@ Click en el botón _**[Bind]**_.
 
 
 
-> Con este paso, lo que hacemos es indicar al RabbitMQ, que los mensajes que lleguen al `exchange` _**logger.exchange**_ y tengan la `routing key` _**"mensaje_de_log"**_ serán derivados a la `queue` _**"logger_input_queue"**_.
+> Con este paso, lo que hacemos es indicar al RabbitMQ, que los mensajes que lleguen al `exchange` _**"logger.exchange"**_ y tengan la `routing key` _**"mensaje_de_log"**_ serán derivados a la `queue` _**"logger_input_queue"**_.
 
 > Los mensajes que no tengan esa clave de ruteo, serán directamente eliminados, as;i que mucho cuidado con esto.
 <br/><br/>
