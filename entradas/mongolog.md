@@ -24,10 +24,10 @@ Después de mucho leer, evidentemente no era el primero en toparse con esta nece
 
 Aprovechando mi experiencia decidí investigar como desarrollar cada uno de los elementos citados en cada lectura valíendome de las herramientas que más conozco:
 
-- [Logback](https://logback.qos.ch/)(v1.2.3): para el registro de los eventos marcados a nivel de código de aplicación.
-- [RabbitMQ](https://www.rabbitmq.com/)(v3.3.5): para el transporte de los datos hasta la base de datos NoSQL.
-- [Spring Boot](https://spring.io/projects/spring-boot)(v2.0.5): utilizando la integración de fábrica con el [RabbitMQ](https://www.rabbitmq.com/) y una de sus clases, particularmente.
-- [MongoDB](https://www.mongodb.com/es)(v3.4.1): como almacen de los datos de eventos registrados, y
+- [Logback](https://logback.qos.ch/)<sub>(v1.2.3)</sub>: para el registro de los eventos marcados a nivel de código de aplicación.
+- [RabbitMQ](https://www.rabbitmq.com/)<sub>(v3.3.5)</sub>: para el transporte de los datos hasta la base de datos NoSQL.
+- [Spring Boot](https://spring.io/projects/spring-boot)<sub>(v2.0.5)</sub>: utilizando la integración de fábrica con el [RabbitMQ](https://www.rabbitmq.com/) y una de sus clases, particularmente.
+- [MongoDB](https://www.mongodb.com/es)<sub>(v3.4.1)</sub>: como almacén de los datos de eventos registrados, y
 - [JSON](https://www.json.org/): como estructura modelo de los datos en todo el flujo.
 
 
