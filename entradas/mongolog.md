@@ -7,7 +7,7 @@
 <img src="https://drive.google.com/uc?id=10DadrJ-pfkwcWLIEQXkrnt0A7lHIxZyk" width="100" alt="logo rabbitmq"/>
 <img src="https://drive.google.com/uc?id=173WPgVpK5eHkAyI84qLo_d8lNE0bcvb-" width="100" alt="logo spring-boot"/>
 <img src="https://drive.google.com/uc?id=1VM92SaWbjKGYUAibjhEkrXI0K_RrADBm" width="100" alt="logo mongodb"/>
-</div>
+</div><br/>
 <div align="center">
 <img src="https://drive.google.com/uc?id=1gIX_QEYZFQTYoAlCS6Ab9XlkERxFStUS" width="200" alt="logo json"/>
 </div>
@@ -24,10 +24,10 @@ Después de mucho leer, evidentemente no era el primero en toparse con esta nece
 
 Aprovechando mi experiencia decidí investigar como desarrollar cada uno de los elementos citados en cada lectura valíendome de las herramientas que más conozco:
 
-- [Logback](https://logback.qos.ch/): para el registro de los eventos marcados a nivel de código de aplicación.
-- [RabbitMQ](https://www.rabbitmq.com/) : para el transporte de los datos hasta la base de datos NoSQL.
-- [Spring AMQP](https://spring.io/projects/spring-amqp): utilizando la integración de fábrica con el [RabbitMQ](https://www.rabbitmq.com/) y una de sus clases, particularmente.
-- [MongoDB](https://www.mongodb.com/es): como almacen de los datos de eventos registrados, y
+- [Logback](https://logback.qos.ch/)(v1.2.3): para el registro de los eventos marcados a nivel de código de aplicación.
+- [RabbitMQ](https://www.rabbitmq.com/)(v3.3.5): para el transporte de los datos hasta la base de datos NoSQL.
+- [Spring Boot](https://spring.io/projects/spring-boot)(v2.0.5): utilizando la integración de fábrica con el [RabbitMQ](https://www.rabbitmq.com/) y una de sus clases, particularmente.
+- [MongoDB](https://www.mongodb.com/es)(v3.4.1): como almacen de los datos de eventos registrados, y
 - [JSON](https://www.json.org/): como estructura modelo de los datos en todo el flujo.
 
 
@@ -50,4 +50,4 @@ Aprovechando mi experiencia decidí investigar como desarrollar cada uno de los 
 
 Despúes de tanta teoría ya podemos empezar con la parte dura en la que escribiremos el código de las aplicaciones de origenes de eventos como también la de recepción y persistencia de los mismos.
 
-### [Paso 1: Preparar el RabbitMQ](./mongolog/rabbitcon)
+### [Paso 1: Preparar el RabbitMQ](./mongolog/rabbitconf)
