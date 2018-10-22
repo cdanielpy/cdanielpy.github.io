@@ -111,7 +111,7 @@ spring.rabbitmq.password= contrasena
 | `spring.rabbitmq.password`     | Clave de acceso.                                             |
 | `spring.rabbitmq.port`         | Puerto de "escucha" de conexiones. Por defecto suele ser 5672. |
 
-Establecidos los parámetros, que pueden ser los mismos utilizados en la configuración del _**logback**_ en el [Paso 3.1](./logback), y probamos ejecutar de vuelta el programa para ver si es que todo esta correcto.
+Establecidos los parámetros, que pueden ser los mismos utilizados en la configuración del _**logback**_ en el [Paso 2.1](./logback), y probamos ejecutar de vuelta el programa para ver si es que todo esta correcto.
 
 Si no hubieran inconvenientes, entonces podemos pasar al modelo de persistencia de nuestra aplicación.
 
