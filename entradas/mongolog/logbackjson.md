@@ -1,8 +1,8 @@
 # Logging Centralizado
 
-## Parte 3.2: Logback a JSON
+## Parte 2.2: Logback a JSON
 
-[Parte 3.1: Configurar el Logback](./logback)
+[Parte 2.1: Configurar el Logback](./logback)
 
 <div align="center">
 <img src="https://drive.google.com/uc?id=1AocSmYP20Lu3o0jIai-O3N2dCkwzRMl2" alt="logback logo" width=""/>
@@ -106,4 +106,4 @@ Con éstos datos ya tenemos básicamente lo necesario para hacerle seguimiento a
 
 Hasta aquí tenemos ya los mensajes de eventos listos para ser procesados por la _**aplicación "suscriptora"**_, que es lo que desarrollaremos en el siquiente paso.
 
-### [Parte 4: El Suscriptor](./suscriptor)
+### [Parte 3: El Suscriptor](./suscriptor)
