@@ -1,8 +1,7 @@
 # Logging Centralizado
 
-## Parte 3: El Publicador de Eventos
-[Parte 1: Presentación](../mongolog)<br/>
-[Parte 2: Preparar el RabbitMQ](./rabbitconf)
+## Parte 2: El Publicador de Eventos
+[Parte 1: Preparar el RabbitMQ](./rabbitconf)
 
 <div align="center">
 <img src="https://drive.google.com/uc?id=1VMny-HWh1Ez-ezZ1Q1UqBBhS9d-1AzIx" width="600" alt="dfd logger"/>
@@ -193,4 +192,4 @@ Hemos de notar que también se ha creado un archivo con el nombre `current.out` 
 
 En el siguiente capítulo, realizaremos los ajustes de configuración en el archivo `logback.xml` para que direccione los mensajes de eventos en notación `json` hacia el `exchange` del _**RabbitMQ**_.
 
-### [Paso 3.1: Configurar el Logback](./logback)
+### [Paso 2.1: Configurar el Logback](./logback)
