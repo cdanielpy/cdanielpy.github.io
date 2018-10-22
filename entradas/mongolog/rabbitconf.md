@@ -1,7 +1,7 @@
 # Logging Centralizado
 
-## Parte 2: Preparar el RabbitMQ
-[Parte 1: Presentación](../mongolog)
+## Parte 1: Preparar el RabbitMQ
+[Presentación](../mongolog)
 
 Continuando con el desarrollo de nuestro proyecto de centralización de eventos de logging, debemos comenzar a preparar el entorno, empezando por el que hará el transporte de los datos.
 
