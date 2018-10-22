@@ -18,7 +18,6 @@ Un `binding` de los mensajes entrantes al `exchange` hacia una `queue` de mensaj
 Una `queue` de destino de los mensajes.
 
 
-
 #### El _"exchange"_ receptor
 
 Estando en la seccion _**[Add a new exchange]**_, de la pestaña _**[Exchanges]**_ del **RabbitMQ** seguimos los pasos siguientes:
@@ -72,10 +71,9 @@ Click en el botón _**[Bind]**_.
 </div>
 
 
-
 > Con este paso, lo que hacemos es indicar al RabbitMQ, que los mensajes que lleguen al `exchange` _**"logger.exchange"**_ y tengan la `routing key` _**"mensaje_de_log"**_ serán derivados a la `queue` _**"logger_input_queue"**_.
 
-> Los mensajes que no tengan esa clave de ruteo, serán directamente eliminados, as;i que mucho cuidado con esto.
+> Los mensajes que no tengan esa clave de ruteo, serán directamente eliminados, así que mucho cuidado con esto.
 <br/><br/>
 
 
