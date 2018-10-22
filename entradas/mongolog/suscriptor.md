@@ -1,8 +1,8 @@
 # Logging Centralizado
 
-## Parte 4: El Suscriptor
+## Parte 3: El Suscriptor
 
-[Parte 3.2: Logback a JSON](./logbackjson)
+[Parte 2.2: Logback a JSON](./logbackjson)
 
 <div align="center">
 <img src="https://drive.google.com/uc?id=1VMny-HWh1Ez-ezZ1Q1UqBBhS9d-1AzIx" width="600" alt="dfd logger"/>
