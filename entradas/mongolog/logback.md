@@ -1,8 +1,8 @@
 
 # Logging Centralizado
 
-## Parte 3.1: Configurar el Logback
-[Parte 3: El Publicador de Eventos](./publicador)
+## Parte 2.1: Configurar el Logback
+[Parte 2: El Publicador de Eventos](./publicador)
 
 <div align="center">
 <img src="https://drive.google.com/uc?id=1AocSmYP20Lu3o0jIai-O3N2dCkwzRMl2" alt="logback logo"/></div><br/>
@@ -128,4 +128,4 @@ Para este ejemplo utilizaremos `JSON` debido a que se puede persistir como tal d
 
 En el siguiente paso, haremos las configuraciones necesarias al _**appender AMQP**_ para que genere los mensajes de e
 
-### [Parte 3.2: Logback a JSON](./logbackjson)
+### [Parte 2.2: Logback a JSON](./logbackjson)
