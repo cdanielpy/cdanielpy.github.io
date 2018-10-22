@@ -100,5 +100,5 @@ Si no es así, debemos de revisar qué es lo que se nos pasó por alto de los pa
 <img src="https://drive.google.com/uc?id=1BiogoxC8pTSNUAX-in69d9k6yKug8oB8" width="300" alt="message ready"/>
 </div>
 
-### [Paso 3: El Publicador de Eventos](./publicador)
+### [Paso 2: El Publicador de Eventos](./publicador)
 
