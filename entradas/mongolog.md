@@ -41,7 +41,7 @@ Aprovechando mi experiencia decidí investigar como desarrollar cada uno de los 
 
 1. Los eventos de cada aplicación se generan y se notifican a una cola en el RabbitMQ.
 2. El RabbitMQ absorbe la carga de datos entrantes y se centralizan en la cola determinada.
-3. La aplicación (que desarrollaremos) monitorea la cola de mensajes y recibe cada uno de ellos, los formatea y persiste en la base de datos MonogoDB.
+3. La aplicación (que desarrollaremos) monitorea la cola de mensajes y recibe cada uno de ellos, los formatea y persiste en la base de datos MongoDB.
 4. A partir de aquí se puede hacer lo que se quiera con los datos, reportes, otras aplicaciones de monitoreo, filtrado, envío de correos, etc.
 
 ----
