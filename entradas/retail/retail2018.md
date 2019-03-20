@@ -56,4 +56,4 @@ Para poder poner en practica los
 ## Primer ejercicio ##
 Con el primer ejercicio veremos como crear una aplicación Spring Boot lista para desplegar en un servidor de aplicaciones en pocos pasos.
 
-[Ir al primer ejercicio](../ejercicios/primer-ejercicio.html)  
+[Ir al primer ejercicio](./ejercicios/primer-ejercicio.html)  
