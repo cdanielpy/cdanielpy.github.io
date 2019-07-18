@@ -6,7 +6,7 @@ _Uno de mis mejores trabajos (autobombo)._
 ## La presentación
 Cuando me separaron de la línea principal del equipo de desarrollo de sistemas con el fin de que el mismo pudiera funcionar con mayor independencia, me encargaron dedicarme a investigar la implementación de un sistema de interfaces de datos entre sistemas a través un software de intercambio de mensajes, un tal [RabbitMQ](https://www.rabbitmq.com/), que implementa el protocolo [AMQP](https://es.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol).
 
-En un principio pensé que se trataba de un software de mensajería instantánea tipo Skype, Messenger, etc, porque con la descripción, es lo primero que se le viene a uno a la cabeza "sistema de intercambio de mensajes", con el tiempo descubrí que se podría implementar algo similar, pero que la funcionalidad del mismo estaba muy por encima de eso.
+En un principio pensé que se trataba de un software de mensajería instantánea tipo Skype, Messenger, etc, porque con la descripción, es lo primero que se le viene a uno a la cabeza _"sistema de intercambio de mensajes"_, con el tiempo descubrí que se podría implementar algo similar, pero que la funcionalidad del mismo estaba muy por encima de eso.
 
 Gracias a la excelente documentación y a los ejemplos de modos de operación que se proveen en la página oficial del proyecto, hacer las primeras pruebas fue cuestión de minutos, y a partir de ahí fue cuestión de horas hacer pruebas pilotos entre dos sistemas de desarrollo propio. Después de comunicar el estado de avance de la investigación y pruebas, se habilitó el camino para implementar el sistema como "middleware" de comunicación entre los sistemas del grupo empresarial, tanto de desarrollo propio como de terceros.
 
@@ -24,7 +24,9 @@ Una idea que se me ocurrió para poder evaluar el impacto en los tiempos era man
 ----
 Una vez que teníamos el desarrollo inicial del _"mensajero proxy"_, la siguiente necesidad que apareció fue la de llevar un control del impacto en el proceso de paso de mensajes, previendo que con el tiempo la cantidad de sistemas clientes y mensajes iría creciendo y se necesitarían métricas para dimensionar el crecimiento del sistema.
 
-La idea al rescate era muy simple, llevar un control de los cambios de estado a medida que pasa por cada uno durante el proceso de persistencia del mismo. Entonces, lo que hicimos fue simplemente dejar un registro del momento de recepción del mensaje, otro del momento de reenvío y uno final, del momento de retorno de respuesta de procesamiento. "Respuesta de procesamiento", cómo sabríamos cuál era el estado de procesamiento final del mensaje en el sistema de destino si sólo estábamos haciendo una "banda de transporte" que funcionaba en un sólo sentido? Éste era, el tercer reto.
+La idea al rescate era muy simple, llevar un control de los cambios de estado a medida que pasa por cada uno durante el proceso de persistencia del mismo. Entonces, lo que hicimos fue simplemente dejar un registro del momento de recepción del mensaje, otro del momento de reenvío y uno final, del momento de retorno de respuesta de procesamiento.
+
+_"Respuesta de procesamiento..."_, cómo sabríamos cuál era el estado de procesamiento final del mensaje en el sistema de destino si sólo estábamos haciendo una _"banda de transporte"_ que funcionaba en un sólo sentido? Éste sería el tercer reto.
 
 ### Tercer reto: Registro de Estado de Procesamiento Final
 ----
@@ -37,6 +39,7 @@ Con el mensaje _"en mano"_, el servicio procedía a hacer una actualización del
 ### Puesta en Producción
 ----
 Después de haber resuelto todas las cuestiones derivadas del simple pedido de poder acceder a los registros de mensajes de datos intercambiados entre los sistemas clientes comunicados, era el momento de poner a prueba lo diseñado y desarrollado. Con la cautela que corresponde a un proyecto nuevo y que apuntaba a interactuar con los grandes sistemas empresariales del grupo, se decidió que los primeros sistemas a comunicar serían el de ServiceDesk y el Redmine (sistema de registro de reclamos de usuarios y el de registro de tareas del equipo de IT).
+
 Obviamente, como era de esperarse con los buenos desarrolladores de software que somos, hubo ajustes que hacer tras las primeras pruebas, pero se pudo cumplir con el objetivo de la interface de datos, que debía funcionar del siguiente modo:
 
 + Cuando un operador del Centro de Asistencia y Soporte (CAS) asignaba un ticket registrado en el ServiceDesk a un miembro del equipo de IT, el sistema debía de enviar un mensaje con los detalles del ticket al Redmine.
@@ -54,7 +57,8 @@ Esquema del flujo de datos durante la implantación inicial del proyecto RabbitM
 
 ### Al día de hoy...
 Casi cuatro años después, el sistema es un elemento esencial para el área de tecnología a nivel de grupo empresarial y ha crecido al punto de contar con una configuración de alta disponibilidad basada en dos nodos servidores, en clúster, y un balanceador de carga y, como era de esperarse, opera _24/7/365_.
-También se ha implementado la misma infraestructura para las empresas del grupo en el exterior y se han establecidos canales de comunicación para entre los sistemas externos y los sistemas locales.
+
+También se ha implementado la misma infraestructura para las empresas del grupo en el exterior y se han establecido canales de comunicación para comunicar los sistemas externos y los sistemas locales.
 
 #### Algunas estadísticas actuales, a nivel local, son las siguientes:
 
@@ -67,7 +71,9 @@ También se ha implementado la misma infraestructura para las empresas del grupo
 
 > Obs.: Los estados corresponden al estado final asignado por el programa que procesa el mensaje, a excepción de los "reenviados", que en realidad no tienen un "acuse de recepción" por parte del sistema destino.
 
-Otro uso que le dimos a partir de este año, es el de canalizador de eventos de logging de algunos sistemas y aplicaciones, de modo a tener un repositorio unificado de consulta de los eventos, sin tener que recurrir a los archivos .log alojados en cada servidor de aplicación, salvo incidentes relacionados a la conectividad de red, obviamente. Éstos mensajes de eventos de logging no pasan a través del "mensajero proxy" ya que no se requiere auditarlos ni son de alta importancia, ya que se en caso de fallo, se cuenta aún con los archivos generados por cada sistema en su propia instalación.
+Otro uso que le dimos a partir de este año, es el de canalizador de eventos de logging de algunos sistemas y aplicaciones, de modo a tener un repositorio unificado de consulta de los eventos, sin tener que recurrir a los archivos .log alojados en cada servidor de aplicación, salvo incidentes relacionados a la conectividad de red, obviamente.
+
+Éstos mensajes de eventos de logging no pasan a través del "mensajero proxy" ya que no se requiere auditarlos ni son de alta importancia, ya que se en caso de fallo, se cuenta aún con los archivos generados por cada sistema en su propia instalación.
 [Desarrollo del Proyecto](https://cdanielpy.github.io/entradas/mongolog)
 
 > Éste es uno de los trabajos de los que me siento más orgulloso de llevar a cabo, sobre todo por la importancia que ha ganado y la performance que presenta, si bien en el fondo parece simple, implementarlo parecía todo un reto en su momento.
