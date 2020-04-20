@@ -1,6 +1,7 @@
 # Interface de Ordenes de Ingreso de Cross Docking
 
-<div align="center"><img src="https://drive.google.com/uc?id=1WPIkS3Q23GXnYji-HFTAVcC9SYGVBrnv¨ width="500" alt="Diagramas de Flujos actual y alternativo."/></div></br>
+<div align="center">
+<img src="https://drive.google.com/uc?id=1WPIkS3Q23GXnYji-HFTAVcC9SYGVBrnv" width="300" alt="Diagramas de Flujos actual y alternativo."/></div></br>
 
 ## Intro
 ---
@@ -22,7 +23,9 @@ El proceso que el el conjunto de aplicaciones realiza cuando un operador indica 
 
 ## El Problema
 
-<div align="center"><img src="https://blog.teknicks.com/hs-fs/hub/233529/file-830520563-png/broken_links.png¨ width="500" alt="Enlace roto representado por una cadena rota"/></div></br>
+<div align="center">
+<img src="https://blog.teknicks.com/hs-fs/hub/233529/file-830520563-png/broken_links.png" width="500" alt="Enlace roto representado por una cadena rota"/>
+</div></br>
 
 La desventaja de este esquema de funcionamiento actual es que el enlace entre las bases de datos de ambos sistemas es muy delicado y tiene una alta dependencia de la comunicación entre los mismos a la hora de ejecutar la consulta remota (_**[OPENQUERY][openquery]**_) desde el **WMS** hacia el **EME**, con lo que cualquier interrupción que ocurriera a nivel de comunicación hace que el procedimiento almacenado _se cuelgue_ y no termine de ejecutarse.
 
@@ -32,7 +35,7 @@ Ahora que ambos servidores se encuentran ubicados físicamente en diferentes ciu
 
 ## La Solución Alternativa
 
-<div align="center"><img src="https://vishalgupta7982.files.wordpress.com/2017/11/amqp.jpg¨ width="500" alt="Esquema simple de intercambio de mensajes entre sistemas"/></div></br>
+<div align="center"><img src="https://vishalgupta7982.files.wordpress.com/2017/11/amqp.jpg" width="500" alt="Esquema simple de intercambio de mensajes entre sistemas"/></div></br>
                                                                                                                                                   
 La solución propuesta se basa en dos fundamentos que actualmente vengo implementando en mis desarrollos:
 1. La especialización/simplificación de procesos, y
@@ -52,7 +55,9 @@ Los componentes a agregar al proceso, además del ya mencionado _**[RabbitMQ](ht
 
 ## La Implementación
 
-<div align="center"><img src="https://161cli18elctkuzva3yluzd6-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/Relevant-Software-product-development-life-cycle.png¨ width="500" alt="Esquema simple de intercambio de mensajes entre sistemas"/></div></br>
+<div align="center">
+<img src="https://161cli18elctkuzva3yluzd6-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/Relevant-Software-product-development-life-cycle.png" width="500" alt="Esquema simple de intercambio de mensajes entre sistemas"/>
+</div></br>
 
 Como el desarrollo ya lo tengo terminado y probado en el esquema de producción actual (=D) considero que está listo para implementarlo en reemplazo del proceso actual, pero para no interrumpir bruscamente el flujo de operaciones del _**CD**_ con la probabilidad de tener errores en los múltiples componentes del circuito actual, lo dividí en los siquientes pasos:
 1. Modificar el proceso **[PERSISTIR OI CROSS DOCKING]** para incluir un número de versión del mismo para poder separar los documentos en _VISTAS_ diferentes (en la base de datos).
