@@ -1,7 +1,7 @@
 # Interface de Ordenes de Ingreso de Cross Docking
 
 <div align="center">
-<img src="https://drive.google.com/uc?id=1WPIkS3Q23GXnYji-HFTAVcC9SYGVBrnv" width="300" alt="Diagramas de Flujos actual y alternativo."/></div></br>
+<img src="https://drive.google.com/uc?id=1WPIkS3Q23GXnYji-HFTAVcC9SYGVBrnv" alt="Diagramas de Flujos actual y alternativo."/></div></br>
 
 ## Intro
 ---
