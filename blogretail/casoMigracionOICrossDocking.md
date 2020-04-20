@@ -1,7 +1,7 @@
 # Interface de Ordenes de Ingreso de Cross Docking
 
 <div align="center">
-<img src="https://drive.google.com/uc?id=1WPIkS3Q23GXnYji-HFTAVcC9SYGVBrnv" alt="Diagramas de Flujos actual y alternativo."/></div></br>
+<img src="https://drive.google.com/uc?id=1WPIkS3Q23GXnYji-HFTAVcC9SYGVBrnv" alt="Diagramas de Flujos actual y alternativo."/></div>
 
 ## Intro
 ---
@@ -10,6 +10,8 @@ Actualmente las _**Ordenes de Ingreso de Cross Doking (OI CD)**_ y las _**Ordene
 La consolicación de los documentos es un proceso opcional cuya finalidad es reducir la cantidad de órdenes generadas en el lado del **WMS** cuando se trata de recibir mercaderías de un proveddor y no tener que separarlas físicamente por cada documento del lado del **ERP** ya que además de complejizar el proceso de recepción, lo retrasa innecesariamente.
 
 ## Procedimiento Actual
+---
+
 El proceso que el el conjunto de aplicaciones realiza cuando un operador indica los documentos a consolidar (o uno sólo de ellos) y transferir al **WMS** se ejecuta del siguiente modo (ver en la imagen principal):
 1. Cuando el operador inicia el proceso de migración mediante el comando correspondiente, el **AJ EDI PC WMS** crea una nueva cabecera con los datos comunes de los elementos seleccionados (origen, destino, tipo, fecha actual, etc). Sí es un sólo elemento, toma los datos de ese único elemento.
 2. Recorre los ítems de los documentos seleccionados y los agrupa por código de artículos sumando la cantidad a recibir de cada uno, una única cantidad por cada artículo diferente.
@@ -22,10 +24,11 @@ El proceso que el el conjunto de aplicaciones realiza cuando un operador indica 
 > **Obs.:** Un paso final que no es parte del proceso en sí es el que los operadores del **WMS** deben ejecutar la _Importación de Ordenes de Trabajo_, para que los datos de las órdenes pasen de las tablas de interfaces (`i_ordenes_ingreso` e `i_ordenes_ingreso_items`) a las diferentes tablas transaccionales del sistema y a estar disponibles para su ejecución por parte de los operadores de las terminales móbiles.
 
 ## El Problema
+---
 
 <div align="center">
 <img src="https://blog.teknicks.com/hs-fs/hub/233529/file-830520563-png/broken_links.png" width="500" alt="Enlace roto representado por una cadena rota"/>
-</div></br>
+</div>
 
 La desventaja de este esquema de funcionamiento actual es que el enlace entre las bases de datos de ambos sistemas es muy delicado y tiene una alta dependencia de la comunicación entre los mismos a la hora de ejecutar la consulta remota (_**[OPENQUERY][openquery]**_) desde el **WMS** hacia el **EME**, con lo que cualquier interrupción que ocurriera a nivel de comunicación hace que el procedimiento almacenado _se cuelgue_ y no termine de ejecutarse.
 
@@ -34,8 +37,9 @@ El diseño de este proceso fue desarrollado cuando los servidores, tanto de apli
 Ahora que ambos servidores se encuentran ubicados físicamente en diferentes ciudades, inclusive, y como nuestra infraestructura de redes de comunicación aún tiene mucho por mejorar, sumando a esto el hecho de que la carga de trabajo en el _**Centro de Distribución (CD)**_ se ha incrementado considerablemente, las probabilidades de que ocurran problemas también se ve incrementada y cuando ocurren afectan a la operación y las sucursales destino de las mercaderías.
 
 ## La Solución Alternativa
+---
 
-<div align="center"><img src="https://vishalgupta7982.files.wordpress.com/2017/11/amqp.jpg" width="500" alt="Esquema simple de intercambio de mensajes entre sistemas"/></div></br>
+<div align="center"><img src="https://vishalgupta7982.files.wordpress.com/2017/11/amqp.jpg" width="500" alt="Esquema simple de intercambio de mensajes entre sistemas"/></div>
                                                                                                                                                   
 La solución propuesta se basa en dos fundamentos que actualmente vengo implementando en mis desarrollos:
 1. La especialización/simplificación de procesos, y
@@ -54,10 +58,11 @@ Los componentes a agregar al proceso, además del ya mencionado _**[RabbitMQ](ht
 > Este flujo ya está actualmente implementado con otros tipos de documentos, como las _**Ordenes de Egreso de Importaciones**_ o los datos del _**Maestro de Artículos**_, con lo que no se trataría de un desarrollo desde cero.
 
 ## La Implementación
+---
 
 <div align="center">
 <img src="https://161cli18elctkuzva3yluzd6-wpengine.netdna-ssl.com/wp-content/uploads/2018/12/Relevant-Software-product-development-life-cycle.png" width="500" alt="Esquema simple de intercambio de mensajes entre sistemas"/>
-</div></br>
+</div>
 
 Como el desarrollo ya lo tengo terminado y probado en el esquema de producción actual (=D) considero que está listo para implementarlo en reemplazo del proceso actual, pero para no interrumpir bruscamente el flujo de operaciones del _**CD**_ con la probabilidad de tener errores en los múltiples componentes del circuito actual, lo dividí en los siquientes pasos:
 1. Modificar el proceso **[PERSISTIR OI CROSS DOCKING]** para incluir un número de versión del mismo para poder separar los documentos en _VISTAS_ diferentes (en la base de datos).
