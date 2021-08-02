@@ -266,7 +266,7 @@ Este este es el mecanismo más común para hacer pruebas unitarias con _JUnit_ y
 
     - Listar (con y sin criterios de filtrado)
 
-    - La clase debería de quedar más o menos parecida a lo que vemos [aquí](./codigos/javaBaseDatos.html). 
+    - La clase debería de quedar más o menos parecida a lo que vemos [aquí](https://cdanielpy.github.io/codigos/javaBaseDatos.html). 
 
       ​
 
@@ -285,7 +285,7 @@ _**Tarea 1-004:**_ Probemos nuestra aplicación hasta este punto escribiendo los
 
 Creamos los métodos correspondientes a los servicios requeridos para poder realizar el ABM y Listado de cada una de las entidades creadas `GET, POST, PUT` y `DELETE`.
 
-Los métodos  deben agregarse a la clase `MainController` y pueden verse como [éste](./codigos/javaAbmAlumnos.html) conjunto.
+Los métodos  deben agregarse a la clase `MainController` y pueden verse como [éste](https://cdanielpy.github.io/codigos/javaAbmAlumnos.html) conjunto.
 
 
 
